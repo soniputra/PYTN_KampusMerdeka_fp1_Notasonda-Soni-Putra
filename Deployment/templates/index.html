@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Site Metas -->
+<title>Prediction Site - Uber vs Lyft</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Site Icons -->
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon" />
+<link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<!-- Site CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="{{ url_for('static', filename='js/modernizr.js') }}"></script> <!-- Modernizr -->
+<!-- UiKit CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/uikit.min.css') }}">
+
+
+</head>
+
+<body id="page-top" class="politics_version">
+
+	<!-- LOADER -->
+	<div id="preloader">
+		<div id="main-ld">
+			<div id="loader"></div>
+		</div>
+	</div><!-- end loader -->
+	<!-- END LOADER -->
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">
+				<img class="img-fluid" src="{{ url_for('static', filename='images/logo.png') }}" alt="" />
+			</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				Menu
+				<i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav text-uppercase ml-auto">
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger active" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#about">Explanation</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#portfolio">Chart</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#team">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#contact">Prediction</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="home" class="main-banner parallaxie"
+		style="background: url('{{ url_for('static', filename='uploads/Banner Background - Final Project 1.png') }}')">
+		<div class="heading">
+			</h3>
+		</div>
+	</section>
+
+	<div id="about" class="section wb" data-aos="zoom-in">
+		<div class="container">
+			<div class="row">
+				<div class="">
+					<div class="message-box">
+						<h2 style="text-align: center;">Explanation</h2>
+						<p style='text-align: justify;'>
+							Perkembangan teknologi saat ini sangat pesat, sehingga dapat mengubah gaya hidup masyarakat
+							sebelumnya. Ini
+							sangat memudahkan pekerjaan masyarakat dalam banyak hal, misalnya mobilitas perjalanan.
+							Meningkatnya akses
+							internet melalui smartphone di kalangan masyarakat dunia mengundang hadirnya transportasi
+							online. Pada tahun
+							2018, New York telah menunjukkan peningkatan yang kuat dalam aktivitas bisnis, sementara
+							juga memimpin skor
+							global dalam human capital. Hal ini berarti, New York menjadi salah satu kota paling
+							berpengaruh di dunia
+							(Kearney, Global Cities Report 2018).</p>
+
+						<p style='text-align: justify;'>
+							Di New Yok, ride-hailing yang paling populer adalah Uber dan Lyft. Secara umum, tidak
+							terdapat banyak
+							perbedaan dari segi biaya dan waktu antara moda ride-hailing dengan taksi. Keunggulan
+							moda
+							ride-hailing
+							dibandingkan dengan taksi adalah dalam aspek kenyamanan. Calon penumpang tidak harus
+							menunggu di pinggir
+							jalan, namun dapat menggunakan aplikasi pada smartphone untuk memanggil pengemudi. </p>
+
+						<p style='text-align: justify;'>
+							Untuk membantu masyarakat New York City dalam memilih transportasi online yang terbaik
+							dengan harga murah
+							berdasarkan berbagai macam pertimbangan, seperti cuaca, hari, dan jarak, maka akan
+							dibuat
+							sebuah Aplikasi
+							Prediksi Harga Transportasi Online (Uber dan Lyft) di New York City dengan Menggunakan
+							Metode Random Forest </p>
+
+					</div><!-- end messagebox -->
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+
+	<div id="portfolio" class="section lb" data-aos="fade-up">
+		<div class=" container">
+			<div class="section-title text-center">
+				<h3>Chart</h3>
+				<p>A chart can represent tabular numeric data, functions or some kinds of quality structure and provides
+					different info.
+				</p>
+			</div><!-- end title -->
+
+			<div class="gallery-menu row">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group text-center">
+						<button class="active" data-filter="*">All Graphic</button>
+						<button data-filter=".gal_a">Bar Plot</button>
+						<button data-filter=".gal_b">Pie Chart</button>
+						<button data-filter=".gal_c">Analysis Chart</button>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="gallery-list row">
+				<!-- Gal_A Section -->
+				<!-- 1 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/transport_bar.png') }}"
+										data-caption="Transport Name">
+										<img src="{{ url_for('static', filename='uploads/transport_bar.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Transport Name Bar Chart</p>
+						</div>
+					</div>
+				</div>
+				<!-- 2 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/kind_barh.png') }}"
+										data-caption="Services Type">
+										<img src="{{ url_for('static', filename='uploads/kind_barh.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Service Type Bar Chart</p>
+						</div>
+					</div>
+				</div>
+				<!-- 3 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/weather_barh.png') }}"
+										data-caption="Weather">
+										<img src="{{ url_for('static', filename='uploads/weather_barh.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Weather Bar Chart</p>
+						</div>
+					</div>
+				</div>
+				<!-- 4 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/route_barh.png') }}"
+										data-caption="Route">
+										<img src="{{ url_for('static', filename='uploads/route_barh.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Route Bar Chart</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gal_B Section -->
+				<!-- 1 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/transport_pie.png') }}"
+										data-caption="Transport Name">
+										<img src="{{ url_for('static', filename='uploads/transport_pie.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Transport Name Pie Chart</p>
+						</div>
+					</div>
+				</div>
+				<!-- 2 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/weather_pie.png') }}"
+										data-caption="Weather">
+										<img src="{{ url_for('static', filename='uploads/weather_pie.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Weather Pie Chart</p>
+						</div>
+					</div>
+				</div>
+				<!-- 3 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/month_pie.png') }}"
+										data-caption="Month">
+										<img src="{{ url_for('static', filename='uploads/month_pie.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Month Pie Chart</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gal_C Section -->
+				<!-- 1 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/linear_regression.png') }}"
+										data-caption="Linear Regression">
+										<img src="{{ url_for('static', filename='uploads/linear_regression.png') }}"
+											alt="" width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Linear Regression Analysis Chart</p>
+						</div>
+					</div>
+				</div>
+				<!-- 2 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/random_forest.png') }}"
+										data-caption="Random Forest">
+										<img src="{{ url_for('static', filename='uploads/random_forest.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Random Forest Analysis Chart</p>
+						</div>
+					</div>
+				</div>
+				<!-- 3 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/decision_tree.png') }}"
+										data-caption="Decision Tree">
+										<img src="{{ url_for('static', filename='uploads/decision_tree.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Decision Tree Analysis Chart</p>
+						</div>
+					</div>
+				</div>
+				<!-- 4 -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c">
+					<div>
+						<div class="uk-card-hover bg-transparent">
+							<!-- Animate png -->
+							<div class="uk-animation-toggle" tabindex="0">
+								<div>
+									<a class="uk-inline"
+										href="{{ url_for('static', filename='uploads/corr_heatmap.png') }}"
+										data-caption="Correlation Heat Map">
+										<img src="{{ url_for('static', filename='uploads/corr_heatmap.png') }}" alt=""
+											width="720" height="480">
+									</a>
+								</div>
+							</div>
+							<p style="text-align:center;font-family:'Segoe UI';font-weight: bolder;" class="text-dark">
+								Correlation Heat Map Analysis Chart</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<!-- Member Team -->
+	<div id="team" class="section wb" data-aos="zoom-in">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Our Team</h3>
+				<p>This group contains 3 certified independent study participants, namely:
+				</p>
+			</div><!-- end title -->
+
+			<div class="row">
+				<div class="col-sm">
+					<div class="our-team">
+						<div class="pic">
+							<img src="{{ url_for('static', filename='uploads/img-2.jpg') }}">
+						</div>
+						<div class="team-content">
+							<h3 class="title">Notasonda Soni Putra</h3>
+							<span class="post">PYTN-KS04-008</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm">
+					<div class="our-team">
+						<div class="pic">
+
+							<img src="{{ url_for('static', filename='uploads/img-4.jpg') }}">
+						</div>
+						<div class="team-content">
+							<h3 class="title">Windy Mega Melani</h3>
+							<span class="post">PYTN-KS04-003</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm">
+					<div class="our-team">
+						<div class="pic">
+
+							<img src="{{ url_for('static', filename='uploads/img-1.jpg') }}">
+						</div>
+						<div class="team-content">
+							<h3 class="title">Ahmad Firdaus Zulva</h3>
+							<span class="post">PYTN-KS04-001</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Prediction Section -->
+	<div id="contact" class="section lb" data-aos="zoom-in-down">
+		<div class="container">
+			<div class="section-title text-center">
+				<h3>Prediction</h3>
+				<p class="text-dark">In this section will be made 3 predictions, namely: <b>Linear Regression, Decision
+						Tree, and
+						Random
+						Forest</b>.
+				</p>
+			</div><!-- end title -->
+			<div class="container-sm">
+				<div class="row">
+					<div class="col-3 button-group filter-button-group text-center">
+						<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+							aria-orientation="vertical">
+							<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+								role="tab" aria-controls="v-pills-home" aria-selected="true">
+								<img src="https://cdn-icons-png.flaticon.com/512/2103/2103601.png"
+									alt="linear_regression_icon" width="20px"> Linear Regression</a>
+							<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+								role="tab" aria-controls="v-pills-profile" aria-selected="false">
+								<img src="https://miro.medium.com/max/522/1*-lZIWa8PuUO9iSMtOCn1xQ.png"
+									alt="linear_regression_icon" width="20px"> Decision Tree</a>
+							<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+								role="tab" aria-controls="v-pills-messages" aria-selected="false">
+								<img src="https://static.thenounproject.com/png/1503830-200.png"
+									alt="linear_regression_icon" width="20px"> Random Forest</a>
+						</div>
+					</div>
+					<div class="col-9">
+
+						<!-- Linear Regression Section -->
+						<div class="tab-content" id="v-pills-tabContent">
+							<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+								aria-labelledby="v-pills-home-tab" data-aos="zoom-in-left">
+								<h3 style="text-align:center;font-weight:bolder;">Linear Regression</h3>
+								<form action="{{ url_for('predict_2')}}" method="post">
+									<div class="form-group">
+										<label for="transport_name">Transport Name</label>
+										<select class="form-control" id="transport_name" name="transport_name"
+											required="required">
+											<option>-- Choose a Transport Name --</option>
+											<option value="0">Lyft</option>
+											<option value="1">Uber</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="kind">Service Type</label>
+										<select class="form-control" id="kind" name="kind" required="required">
+											<option>-- Choose a Service Type --</option>
+											<option value="0">Uber XL</option>
+											<option value="1">Uber WAV</option>
+											<option value="2">Uber Black SUV</option>
+											<option value="3">Uber Black</option>
+											<option value="4">Uber X</option>
+											<option value="5">Uber Pool</option>
+											<option value="6">Uber Lux</option>
+											<option value="7">Lyft Taxi</option>
+											<option value="8">Lyft Black XL</option>
+											<option value="9">Lyft XL</option>
+											<option value="10">Lyft Black</option>
+											<option value="11">Lyft Shared</option>
+										</select>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="start">Pick-up Point</label>
+											<select class="form-control" id="start" name="start" required="required">
+												<option>-- Choose a Pick-up Point --</option>
+												<option value="0">Financial District</option>
+												<option value="1">Back Bay</option>
+												<option value="2">Theatre District</option>
+												<option value="3">Boston University</option>
+												<option value="4">North End</option>
+												<option value="5">Fenway</option>
+												<option value="6">Northeastern University</option>
+												<option value="7">South Station</option>
+												<option value="8">Haymarket Square</option>
+												<option value="9">West End</option>
+												<option value="10">Beacon Hill</option>
+												<option value="11">North Station</option>
+											</select>
+										</div>
+										<div class="form-group col-md-6">
+											<label for="finish">Drop Point</label>
+											<select class="form-control" id="finish" name="finish" required="required">
+												<option>-- Choose a Drop Point --</option>
+												<option value="0">Financial District</option>
+												<option value="1">Back Bay</option>
+												<option value="2">Theatre District</option>
+												<option value="3">Boston University</option>
+												<option value="4">North End</option>
+												<option value="5">Fenway</option>
+												<option value="6">Northeastern University</option>
+												<option value="7">South Station</option>
+												<option value="8">Haymarket Square</option>
+												<option value="9">West End</option>
+												<option value="10">Beacon Hill</option>
+												<option value="11">North Station</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="visibility">Visibilty</label>
+										<input type="number" name="visibility" class="form-control" id="visibility"
+											placeholder="Insert Visibilitty Range (0 - 548)" min="0" max="548"
+											required="required">
+									</div>
+									<div class="form-group">
+										<label for="weather">Weather</label>
+										<select class="form-control" id="weather" name="weather" required="required">
+											<option>-- Choose a Weather Condition --</option>
+											<option value="0">Overcast</option>
+											<option value="1">Mostly Cloudy</option>
+											<option value="2">Party Cloudy</option>
+											<option value="3">Clear</option>
+											<option value="4">Light Rain</option>
+											<option value="5">Rain</option>
+											<option value="6">Possible Drizzle</option>
+											<option value="7">Foggy</option>
+											<option value="8">Drizzle</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="distance">Distance</label>
+										<input type="number" name="distance" class="form-control" id="distance"
+											placeholder="Insert Distance Range (0 - 256)" min="0" max="256"
+											required="required">
+									</div>
+									<div class="form-group">
+										<label for="surge_multiplier">Surge Multiplier Pricing</label>
+										<select class="form-control" id="surge_multiplier" name="surge_multiplier"
+											required="required">
+											<option>-- Choose a Surge Multiplier Pricing --</option>
+											<option value="0">$1.00</option>
+											<option value="1">$1.25</option>
+											<option value="2">$1.50</option>
+											<option value="3">$1.75</option>
+											<option value="4">$2.00</option>
+											<option value="5">$2.50</option>
+											<option value="6">$3.00</option>
+										</select>
+									</div>
+									{{ prediction_text_2 }}
+									<div class="col-lg-12 text-center">
+										<div id="success"></div>
+										<button class="sim-btn hvr-bounce-to-top" type="submit">Prediksi</button>
+										<button class="sim-btn hvr-bounce-to-top" type="reset">Reset</button>
+									</div>
+								</form>
+							</div>
+
+							<!-- Decision Tree Section -->
+							<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+								aria-labelledby="v-pills-profile-tab" data-aos="zoom-in-left">
+								<h3 style="text-align:center;font-weight:bolder;">Decision Tree</h3>
+								<form action="{{ url_for('predict_1')}}" method="post">
+									<div class="form-group">
+										<label for="transport_name">Transport Name</label>
+										<select class="form-control" id="transport_name" name="transport_name"
+											required="required">
+											<option>-- Choose a Transport Name --</option>
+											<option value="0">Lyft</option>
+											<option value="1">Uber</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="kind">Service Type</label>
+										<select class="form-control" id="kind" name="kind" required="required">
+											<option>-- Choose a Service Type --</option>
+											<option value="0">Uber XL</option>
+											<option value="1">Uber WAV</option>
+											<option value="2">Uber Black SUV</option>
+											<option value="3">Uber Black</option>
+											<option value="4">Uber X</option>
+											<option value="5">Uber Pool</option>
+											<option value="6">Uber Lux</option>
+											<option value="7">Lyft Taxi</option>
+											<option value="8">Lyft Black XL</option>
+											<option value="9">Lyft XL</option>
+											<option value="10">Lyft Black</option>
+											<option value="11">Lyft Shared</option>
+										</select>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="start">Pick-up Point</label>
+											<select class="form-control" id="start" name="start" required="required">
+												<option>-- Choose a Pick-up Point --</option>
+												<option value="0">Financial District</option>
+												<option value="1">Back Bay</option>
+												<option value="2">Theatre District</option>
+												<option value="3">Boston University</option>
+												<option value="4">North End</option>
+												<option value="5">Fenway</option>
+												<option value="6">Northeastern University</option>
+												<option value="7">South Station</option>
+												<option value="8">Haymarket Square</option>
+												<option value="9">West End</option>
+												<option value="10">Beacon Hill</option>
+												<option value="11">North Station</option>
+											</select>
+										</div>
+										<div class="form-group col-md-6">
+											<label for="finish">Drop Point</label>
+											<select class="form-control" id="finish" name="finish" required="required">
+												<option>-- Choose a Drop Point --</option>
+												<option value="0">Financial District</option>
+												<option value="1">Back Bay</option>
+												<option value="2">Theatre District</option>
+												<option value="3">Boston University</option>
+												<option value="4">North End</option>
+												<option value="5">Fenway</option>
+												<option value="6">Northeastern University</option>
+												<option value="7">South Station</option>
+												<option value="8">Haymarket Square</option>
+												<option value="9">West End</option>
+												<option value="10">Beacon Hill</option>
+												<option value="11">North Station</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="visibility">Visibilty</label>
+										<input type="number" name="visibility" class="form-control" id="visibility"
+											placeholder="Insert Visibilitty Range (0 - 548)" min="0" max="548"
+											required="required">
+									</div>
+									<div class="form-group">
+										<label for="weather">Weather</label>
+										<select class="form-control" id="weather" name="weather" required="required">
+											<option>-- Choose a Weather Condition --</option>
+											<option value="0">Overcast</option>
+											<option value="1">Mostly Cloudy</option>
+											<option value="2">Party Cloudy</option>
+											<option value="3">Clear</option>
+											<option value="4">Light Rain</option>
+											<option value="5">Rain</option>
+											<option value="6">Possible Drizzle</option>
+											<option value="7">Foggy</option>
+											<option value="8">Drizzle</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="distance">Distance</label>
+										<input type="number" name="distance" class="form-control" id="distance"
+											placeholder="Insert Distance Range (0 - 256)" min="0" max="256"
+											required="required">
+									</div>
+									<div class="form-group">
+										<label for="surge_multiplier">Surge Multiplier Pricing</label>
+										<select class="form-control" id="surge_multiplier" name="surge_multiplier"
+											required="required">
+											<option>-- Choose a Surge Multiplier Pricing --</option>
+											<option value="0">$1.00</option>
+											<option value="1">$1.25</option>
+											<option value="2">$1.50</option>
+											<option value="3">$1.75</option>
+											<option value="4">$2.00</option>
+											<option value="5">$2.50</option>
+											<option value="6">$3.00</option>
+										</select>
+									</div>
+									{{ prediction_text_1 }}
+									<div class="col-lg-12 text-center">
+										<div id="success"></div>
+										<button class="sim-btn hvr-bounce-to-top" type="submit">Prediksi</button>
+										<button class="sim-btn hvr-bounce-to-top" type="reset">Reset</button>
+									</div>
+								</form>
+							</div>
+
+							<!-- Random Forest Section -->
+							<div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+								aria-labelledby="v-pills-messages-tab" data-aos="zoom-in-left">
+								<h3 style="text-align:center;font-weight:bolder;">Random Forest</h3>
+								<form action="{{ url_for('predict_3')}}" method="post">
+									<div class="form-group">
+										<label for="transport_name">Transport Name</label>
+										<select class="form-control" id="transport_name" name="transport_name"
+											required="required">
+											<option>-- Choose a Transport Name --</option>
+											<option value="0">Lyft</option>
+											<option value="1">Uber</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="kind">Service Type</label>
+										<select class="form-control" id="kind" name="kind" required="required">
+											<option>-- Choose a Service Type --</option>
+											<option value="0">Uber XL</option>
+											<option value="1">Uber WAV</option>
+											<option value="2">Uber Black SUV</option>
+											<option value="3">Uber Black</option>
+											<option value="4">Uber X</option>
+											<option value="5">Uber Pool</option>
+											<option value="6">Uber Lux</option>
+											<option value="7">Lyft Taxi</option>
+											<option value="8">Lyft Black XL</option>
+											<option value="9">Lyft XL</option>
+											<option value="10">Lyft Black</option>
+											<option value="11">Lyft Shared</option>
+										</select>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="start">Pick-up Point</label>
+											<select class="form-control" id="start" name="start" required="required">
+												<option>-- Choose a Pick-up Point --</option>
+												<option value="0">Financial District</option>
+												<option value="1">Back Bay</option>
+												<option value="2">Theatre District</option>
+												<option value="3">Boston University</option>
+												<option value="4">North End</option>
+												<option value="5">Fenway</option>
+												<option value="6">Northeastern University</option>
+												<option value="7">South Station</option>
+												<option value="8">Haymarket Square</option>
+												<option value="9">West End</option>
+												<option value="10">Beacon Hill</option>
+												<option value="11">North Station</option>
+											</select>
+										</div>
+										<div class="form-group col-md-6">
+											<label for="finish">Drop Point</label>
+											<select class="form-control" id="finish" name="finish" required="required">
+												<option>-- Choose a Drop Point --</option>
+												<option value="0">Financial District</option>
+												<option value="1">Back Bay</option>
+												<option value="2">Theatre District</option>
+												<option value="3">Boston University</option>
+												<option value="4">North End</option>
+												<option value="5">Fenway</option>
+												<option value="6">Northeastern University</option>
+												<option value="7">South Station</option>
+												<option value="8">Haymarket Square</option>
+												<option value="9">West End</option>
+												<option value="10">Beacon Hill</option>
+												<option value="11">North Station</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="visibility">Visibilty</label>
+										<input type="number" name="visibility" class="form-control" id="visibility"
+											placeholder="Insert Visibilitty Range (0 - 548)" min="0" max="548"
+											required="required">
+									</div>
+									<div class="form-group">
+										<label for="weather">Weather</label>
+										<select class="form-control" id="weather" name="weather" required="required">
+											<option>-- Choose a Weather Condition --</option>
+											<option value="0">Overcast</option>
+											<option value="1">Mostly Cloudy</option>
+											<option value="2">Party Cloudy</option>
+											<option value="3">Clear</option>
+											<option value="4">Light Rain</option>
+											<option value="5">Rain</option>
+											<option value="6">Possible Drizzle</option>
+											<option value="7">Foggy</option>
+											<option value="8">Drizzle</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="distance">Distance</label>
+										<input type="number" name="distance" class="form-control" id="distance"
+											placeholder="Insert Distance Range (0 - 256)" min="0" max="256"
+											required="required">
+									</div>
+									<div class="form-group">
+										<label for="surge_multiplier">Surge Multiplier Pricing</label>
+										<select class="form-control" id="surge_multiplier" name="surge_multiplier"
+											required="required">
+											<option>-- Choose a Surge Multiplier Pricing --</option>
+											<option value="0">$1.00</option>
+											<option value="1">$1.25</option>
+											<option value="2">$1.50</option>
+											<option value="3">$1.75</option>
+											<option value="4">$2.00</option>
+											<option value="5">$2.50</option>
+											<option value="6">$3.00</option>
+										</select>
+									</div>
+									{{  prediction_text_3 }}
+									<div class="col-lg-12 text-center">
+										<div id="success"></div>
+										<button class="sim-btn hvr-bounce-to-top" type="submit">Prediksi</button>
+										<button class="sim-btn hvr-bounce-to-top" type="reset">Reset</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<div class="copyrights">
+		<div class="container">
+			<div class="footer-distributed">
+				<div class="footer-center">
+					<p class="footer-company-name">Prediction Site &copy; 2022 | Designed By : Soni, Windy, Zulva</p>
+				</div>
+			</div>
+		</div><!-- end container -->
+	</div><!-- end copyrights -->
+
+	<a href="#" id="scroll-to-top" class="dmtop global-radius">
+		<div style="font-size: 20px;">Top</div>
+	</a>
+
+	<!-- ALL JS FILES -->
+
+	<script src="{{ url_for('static', filename='js/all.js') }}"></script>
+	<!-- Camera Slider  -->
+	<script src="{{ url_for('static', filename='js/jquery.mobile.customized.min.js ') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/parallaxie.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/headline.js') }}"></script>
+	<!-- Contact form JavaScript -->
+	<script src="{{ url_for('static', filename='js/jqBootstrapValidation.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/contact_me.js') }}"></script>
+	<!-- ALL PLUGINS -->
+	<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.vide.js') }}"></script>
+	<!-- Style JS -->
+	<script src="{{ url_for('static', filename='js/style.js') }}"></script>
+	<!-- UIKIT JS CDN -->
+	<script src="{{ url_for('static', filename='js/uikit.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>
