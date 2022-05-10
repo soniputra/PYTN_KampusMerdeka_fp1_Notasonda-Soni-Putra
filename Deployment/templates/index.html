@@ -14,9 +14,6 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<!-- Site Icons -->
-<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon" />
-<link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -91,39 +88,89 @@
 			<div class="row">
 				<div class="">
 					<div class="message-box">
-						<h2 style="text-align: center;">Explanation</h2>
-						<p style='text-align: justify;'>
-							Perkembangan teknologi saat ini sangat pesat, sehingga dapat mengubah gaya hidup masyarakat
-							sebelumnya. Ini
-							sangat memudahkan pekerjaan masyarakat dalam banyak hal, misalnya mobilitas perjalanan.
-							Meningkatnya akses
-							internet melalui smartphone di kalangan masyarakat dunia mengundang hadirnya transportasi
-							online. Pada tahun
-							2018, New York telah menunjukkan peningkatan yang kuat dalam aktivitas bisnis, sementara
-							juga memimpin skor
-							global dalam human capital. Hal ini berarti, New York menjadi salah satu kota paling
-							berpengaruh di dunia
-							(Kearney, Global Cities Report 2018).</p>
+						<div class="section-title text-center">
+							<h3>Explanation</h3>
+							<p>In this section, there is a description of the abstract and also a description of the
+								data.
+							</p>
+						</div><!-- end title -->
+						<nav>
+							<div class="nav nav-tabs" id="nav-tab" role="tablist">
+								<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+									role="tab" aria-controls="nav-home" aria-selected="true">Data</a>
+								<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+									role="tab" aria-controls="nav-profile" aria-selected="false">Abstract</a>
+							</div>
+						</nav>
+						<div class="tab-content mt-3 " id="nav-tabContent">
+							<div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+								aria-labelledby="nav-home-tab">
+								<h3 style="text-align:center;font-weight:bolder; " class="text-muted">Dataset</h3>
+								<p style='text-align: justify;'>
+									Dataset yang digunakan yaitu <b>Uber vs Lyft Dataset New York, USA</b> yang berisi
+									record data perjalanan
+									taksi online Uber dan Lyft di New York, USA. Dataset ini memiliki 57 atribut, tetapi
+									yang paling relevan ada
+									10 atribut dari semuanya. Dari 57 atribut, data yang diperlukan untuk proyek ini
+									antara lain:
+								</p>
+								<ul>
+									<li>Cab_type: Merek transportasi online (Uber, Lyft).</li>
+									<li>Name: Jenis mobil yang dipilih (Lux, Lux Black XL, Lyft, Lyft XL, UberXL, Taxi,
+										Uberpool, Black SUV, WAV, Black, UberX, Lux Black, Shared).</li>
+									<li>Hour: Pukul berapa transportasi online dipesan (24 jam).</li>
+									<li>Day: Tanggal berapa transportasi online dipesan.</li>
+									<li>Month: Bulan apa saja transportasi online dipesan (bulan 11 dan 12).</li>
+									<li>Source: Destinasi awal.</li>
+									<li>Destination: Destinasi akhir.</li>
+									<li>Price: Harga transportasi online (dollar US).</li>
+									<li>Distance: Jarak yang ditempuh (km).</li>
+									<li>Short_summary: Cuaca ketika transportasi online dipesan (Overcast, Mostly
+										Cloudy, Partly Cloudy, Clear, Light Rain, Rain, Possible Drizzle, Foggy,
+										Drizzle).</li>
+									<li>Temperature: Suhu ketika transportasi online dipesan (Celcius).</li>
+									<li>Visibility: Jarak penglihatan.</li>
+									<li>Surge_multiplier: Kenaikan harga penawaran ketika terjadi lonjakan penumpang.
+									</li>
+								</ul>
+							</div>
 
-						<p style='text-align: justify;'>
-							Di New Yok, ride-hailing yang paling populer adalah Uber dan Lyft. Secara umum, tidak
-							terdapat banyak
-							perbedaan dari segi biaya dan waktu antara moda ride-hailing dengan taksi. Keunggulan
-							moda
-							ride-hailing
-							dibandingkan dengan taksi adalah dalam aspek kenyamanan. Calon penumpang tidak harus
-							menunggu di pinggir
-							jalan, namun dapat menggunakan aplikasi pada smartphone untuk memanggil pengemudi. </p>
+							<div class="tab-pane fade" id="nav-profile" role="tabpanel"
+								aria-labelledby="nav-profile-tab">
+								<h3 style="text-align:center;font-weight:bolder;" class=" text-muted">Abstract</h3>
+								<p style='text-align: justify;'>
+									Perkembangan teknologi saat ini sangat pesat, sehingga dapat mengubah gaya hidup
+									masyarakat sebelumnya. Ini
+									sangat memudahkan pekerjaan masyarakat dalam banyak hal, misalnya mobilitas
+									perjalanan. Meningkatnya akses
+									internet melalui smartphone di kalangan masyarakat dunia mengundang hadirnya
+									transportasi online. Pada tahun
+									2018, New York telah menunjukkan peningkatan yang kuat dalam aktivitas bisnis,
+									sementara juga memimpin skor
+									global dalam human capital. Hal ini berarti, New York menjadi salah satu kota paling
+									berpengaruh di dunia
+									(Kearney, Global Cities Report 2018).</p>
 
-						<p style='text-align: justify;'>
-							Untuk membantu masyarakat New York City dalam memilih transportasi online yang terbaik
-							dengan harga murah
-							berdasarkan berbagai macam pertimbangan, seperti cuaca, hari, dan jarak, maka akan
-							dibuat
-							sebuah Aplikasi
-							Prediksi Harga Transportasi Online (Uber dan Lyft) di New York City dengan Menggunakan
-							Metode Random Forest </p>
+								<p style='text-align: justify;'>
+									Di New York, ride-hailing yang paling populer adalah Uber dan Lyft. Secara umum,
+									tidak terdapat banyak
+									perbedaan dari segi biaya dan waktu antara moda ride-hailing dengan taksi.
+									Keunggulan moda ride-hailing
+									dibandingkan dengan taksi adalah dalam aspek kenyamanan. Calon penumpang tidak harus
+									menunggu di pinggir
+									jalan, namun dapat menggunakan aplikasi pada smartphone untuk memanggil pengemudi.
+								</p>
 
+								<p style='text-align: justify;'>
+									Untuk membantu masyarakat New York City dalam memilih transportasi online yang
+									terbaik dengan harga murah
+									berdasarkan berbagai macam pertimbangan, seperti cuaca, hari, dan jarak, maka akan
+									dibuat sebuah Aplikasi
+									Prediksi Harga Transportasi Online (Uber dan Lyft) di New York City dengan
+									Menggunakan Perbandingan Metode
+									Linear Regression dan Random Forest </p>
+							</div>
+						</div>
 					</div><!-- end messagebox -->
 				</div><!-- end col -->
 			</div><!-- end row -->
@@ -436,14 +483,13 @@
 	</div>
 
 	<!-- Prediction Section -->
-	<div id="contact" class="section lb" data-aos="zoom-in-down">
+	<div id="contact" class="section lb">
 		<div class="container">
 			<div class="section-title text-center">
 				<h3>Prediction</h3>
-				<p class="text-dark">In this section will be made 3 predictions, namely: <b>Linear Regression, Decision
-						Tree, and
-						Random
-						Forest</b>.
+				<p class="text-dark">In this section will be made two predictions, namely: <b>Linear Regression, and
+						Decision
+						Tree,</b>.
 				</p>
 			</div><!-- end title -->
 			<div class="container-sm">
@@ -459,10 +505,10 @@
 								role="tab" aria-controls="v-pills-profile" aria-selected="false">
 								<img src="https://miro.medium.com/max/522/1*-lZIWa8PuUO9iSMtOCn1xQ.png"
 									alt="linear_regression_icon" width="20px"> Decision Tree</a>
-							<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+							<!--a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
 								role="tab" aria-controls="v-pills-messages" aria-selected="false">
 								<img src="https://static.thenounproject.com/png/1503830-200.png"
-									alt="linear_regression_icon" width="20px"> Random Forest</a>
+									alt="linear_regression_icon" width="20px"> Random Forest</a> -->
 						</div>
 					</div>
 					<div class="col-9">
@@ -470,7 +516,7 @@
 						<!-- Linear Regression Section -->
 						<div class="tab-content" id="v-pills-tabContent">
 							<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-								aria-labelledby="v-pills-home-tab" data-aos="zoom-in-left">
+								aria-labelledby="v-pills-home-tab">
 								<h3 style="text-align:center;font-weight:bolder;">Linear Regression</h3>
 								<form action="{{ url_for('predict_2')}}" method="post">
 									<div class="form-group">
@@ -582,7 +628,7 @@
 									{{ prediction_text_2 }}
 									<div class="col-lg-12 text-center">
 										<div id="success"></div>
-										<button class="sim-btn hvr-bounce-to-top" type="submit">Prediksi</button>
+										<button class="sim-btn hvr-bounce-to-top" type="submit">Predict</button>
 										<button class="sim-btn hvr-bounce-to-top" type="reset">Reset</button>
 									</div>
 								</form>
@@ -590,7 +636,7 @@
 
 							<!-- Decision Tree Section -->
 							<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-								aria-labelledby="v-pills-profile-tab" data-aos="zoom-in-left">
+								aria-labelledby="v-pills-profile-tab">
 								<h3 style="text-align:center;font-weight:bolder;">Decision Tree</h3>
 								<form action="{{ url_for('predict_1')}}" method="post">
 									<div class="form-group">
@@ -702,127 +748,7 @@
 									{{ prediction_text_1 }}
 									<div class="col-lg-12 text-center">
 										<div id="success"></div>
-										<button class="sim-btn hvr-bounce-to-top" type="submit">Prediksi</button>
-										<button class="sim-btn hvr-bounce-to-top" type="reset">Reset</button>
-									</div>
-								</form>
-							</div>
-
-							<!-- Random Forest Section -->
-							<div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-								aria-labelledby="v-pills-messages-tab" data-aos="zoom-in-left">
-								<h3 style="text-align:center;font-weight:bolder;">Random Forest</h3>
-								<form action="{{ url_for('predict_3')}}" method="post">
-									<div class="form-group">
-										<label for="transport_name">Transport Name</label>
-										<select class="form-control" id="transport_name" name="transport_name"
-											required="required">
-											<option>-- Choose a Transport Name --</option>
-											<option value="0">Lyft</option>
-											<option value="1">Uber</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="kind">Service Type</label>
-										<select class="form-control" id="kind" name="kind" required="required">
-											<option>-- Choose a Service Type --</option>
-											<option value="0">Uber XL</option>
-											<option value="1">Uber WAV</option>
-											<option value="2">Uber Black SUV</option>
-											<option value="3">Uber Black</option>
-											<option value="4">Uber X</option>
-											<option value="5">Uber Pool</option>
-											<option value="6">Uber Lux</option>
-											<option value="7">Lyft Taxi</option>
-											<option value="8">Lyft Black XL</option>
-											<option value="9">Lyft XL</option>
-											<option value="10">Lyft Black</option>
-											<option value="11">Lyft Shared</option>
-										</select>
-									</div>
-									<div class="form-row">
-										<div class="form-group col-md-6">
-											<label for="start">Pick-up Point</label>
-											<select class="form-control" id="start" name="start" required="required">
-												<option>-- Choose a Pick-up Point --</option>
-												<option value="0">Financial District</option>
-												<option value="1">Back Bay</option>
-												<option value="2">Theatre District</option>
-												<option value="3">Boston University</option>
-												<option value="4">North End</option>
-												<option value="5">Fenway</option>
-												<option value="6">Northeastern University</option>
-												<option value="7">South Station</option>
-												<option value="8">Haymarket Square</option>
-												<option value="9">West End</option>
-												<option value="10">Beacon Hill</option>
-												<option value="11">North Station</option>
-											</select>
-										</div>
-										<div class="form-group col-md-6">
-											<label for="finish">Drop Point</label>
-											<select class="form-control" id="finish" name="finish" required="required">
-												<option>-- Choose a Drop Point --</option>
-												<option value="0">Financial District</option>
-												<option value="1">Back Bay</option>
-												<option value="2">Theatre District</option>
-												<option value="3">Boston University</option>
-												<option value="4">North End</option>
-												<option value="5">Fenway</option>
-												<option value="6">Northeastern University</option>
-												<option value="7">South Station</option>
-												<option value="8">Haymarket Square</option>
-												<option value="9">West End</option>
-												<option value="10">Beacon Hill</option>
-												<option value="11">North Station</option>
-											</select>
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="visibility">Visibilty</label>
-										<input type="number" name="visibility" class="form-control" id="visibility"
-											placeholder="Insert Visibilitty Range (0 - 548)" min="0" max="548"
-											required="required">
-									</div>
-									<div class="form-group">
-										<label for="weather">Weather</label>
-										<select class="form-control" id="weather" name="weather" required="required">
-											<option>-- Choose a Weather Condition --</option>
-											<option value="0">Overcast</option>
-											<option value="1">Mostly Cloudy</option>
-											<option value="2">Party Cloudy</option>
-											<option value="3">Clear</option>
-											<option value="4">Light Rain</option>
-											<option value="5">Rain</option>
-											<option value="6">Possible Drizzle</option>
-											<option value="7">Foggy</option>
-											<option value="8">Drizzle</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label for="distance">Distance</label>
-										<input type="number" name="distance" class="form-control" id="distance"
-											placeholder="Insert Distance Range (0 - 256)" min="0" max="256"
-											required="required">
-									</div>
-									<div class="form-group">
-										<label for="surge_multiplier">Surge Multiplier Pricing</label>
-										<select class="form-control" id="surge_multiplier" name="surge_multiplier"
-											required="required">
-											<option>-- Choose a Surge Multiplier Pricing --</option>
-											<option value="0">$1.00</option>
-											<option value="1">$1.25</option>
-											<option value="2">$1.50</option>
-											<option value="3">$1.75</option>
-											<option value="4">$2.00</option>
-											<option value="5">$2.50</option>
-											<option value="6">$3.00</option>
-										</select>
-									</div>
-									{{  prediction_text_3 }}
-									<div class="col-lg-12 text-center">
-										<div id="success"></div>
-										<button class="sim-btn hvr-bounce-to-top" type="submit">Prediksi</button>
+										<button class="sim-btn hvr-bounce-to-top" type="submit">Predict</button>
 										<button class="sim-btn hvr-bounce-to-top" type="reset">Reset</button>
 									</div>
 								</form>
